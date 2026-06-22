@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    radial-gradient(1.6px 1.6px at 5% 8%, rgba(255, 255, 255, 0.95), transparent 62%),
+    radial-gradient(1.4px 1.4px at 10% 40%, rgba(255, 255, 255, 0.88), transparent 62%),
+    radial-gradient(1.6px 1.6px at 15% 75%, rgba(255, 255, 255, 0.93), transparent 62%),
+    radial-gradient(1.3px 1.3px at 22% 22%, rgba(255, 255, 255, 0.85), transparent 62%),
+    radial-gradient(1.5px 1.5px at 28% 58%, rgba(255, 255, 255, 0.92), transparent 62%),
+    radial-gradient(1.2px 1.2px at 35% 12%, rgba(255, 255, 255, 0.78), transparent 62%),
+    radial-gradient(1.7px 1.7px at 41% 82%, rgba(255, 255, 255, 0.96), transparent 62%),
+    radial-gradient(1.4px 1.4px at 49% 33%, rgba(255, 255, 255, 0.86), transparent 62%),
+    radial-gradient(1.6px 1.6px at 56% 65%, rgba(255, 255, 255, 0.92), transparent 62%),
+    radial-gradient(1.3px 1.3px at 63% 18%, rgba(255, 255, 255, 0.8), transparent 62%),
+    radial-gradient(1.5px 1.5px at 71% 52%, rgba(255, 255, 255, 0.9), transparent 62%),
+    radial-gradient(1.7px 1.7px at 79% 88%, rgba(255, 255, 255, 0.98), transparent 62%),
+    radial-gradient(1.4px 1.4px at 86% 29%, rgba(255, 255, 255, 0.89), transparent 62%),
+    radial-gradient(1.6px 1.6px at 92% 60%, rgba(255, 255, 255, 0.94), transparent 62%),
+    radial-gradient(1.4px 1.4px at 97% 14%, rgba(255, 255, 255, 0.87), transparent 62%),
+    radial-gradient(1.1px 1.1px at 7% 57%, rgba(255, 255, 255, 0.82), transparent 62%),
+    radial-gradient(1.2px 1.2px at 13% 91%, rgba(255, 255, 255, 0.9), transparent 62%),
+    radial-gradient(1.1px 1.1px at 19% 66%, rgba(255, 255, 255, 0.78), transparent 62%),
+    radial-gradient(1.2px 1.2px at 26% 6%, rgba(255, 255, 255, 0.85), transparent 62%),
+    radial-gradient(1.1px 1.1px at 32% 48%, rgba(255, 255, 255, 0.8), transparent 62%),
+    radial-gradient(1.2px 1.2px at 38% 95%, rgba(255, 255, 255, 0.92), transparent 62%),
+    radial-gradient(1.1px 1.1px at 44% 61%, rgba(255, 255, 255, 0.84), transparent 62%),
+    radial-gradient(1.2px 1.2px at 51% 27%, rgba(255, 255, 255, 0.81), transparent 62%),
+    radial-gradient(1.1px 1.1px at 58% 87%, rgba(255, 255, 255, 0.9), transparent 62%),
+    radial-gradient(1.2px 1.2px at 64% 43%, rgba(255, 255, 255, 0.79), transparent 62%),
+    radial-gradient(1.1px 1.1px at 69% 9%, rgba(255, 255, 255, 0.86), transparent 62%),
+    radial-gradient(1.2px 1.2px at 75% 63%, rgba(255, 255, 255, 0.82), transparent 62%),
+    radial-gradient(1.1px 1.1px at 81% 17%, rgba(255, 255, 255, 0.84), transparent 62%),
+    radial-gradient(1.2px 1.2px at 88% 93%, rgba(255, 255, 255, 0.9), transparent 62%),
+    radial-gradient(1.1px 1.1px at 95% 49%, rgba(255, 255, 255, 0.8), transparent 62%);
+  opacity: 1;
+  animation: twinkleSlow 5.5s ease-in-out infinite;
+}
+
+body::after {
+  background:
+    radial-gradient(2.6px 2.6px at 12% 20%, rgba(255, 255, 255, 0.95), transparent 64%),
+    radial-gradient(2.2px 2.2px at 24% 88%, rgba(255, 255, 255, 0.88), transparent 64%),
+    radial-gradient(2.8px 2.8px at 38% 46%, rgba(255, 255, 255, 0.98), transparent 64%),
+    radial-gradient(2.1px 2.1px at 52% 10%, rgba(255, 255, 255, 0.9), transparent 64%),
+    radial-gradient(2.4px 2.4px at 67% 74%, rgba(255, 255, 255, 0.92), transparent 64%),
+    radial-gradient(2.7px 2.7px at 82% 36%, rgba(255, 255, 255, 0.97), transparent 64%),
+    radial-gradient(2.3px 2.3px at 94% 82%, rgba(255, 255, 255, 0.9), transparent 64%),
+    radial-gradient(2.2px 2.2px at 8% 68%, rgba(255, 255, 255, 0.88), transparent 64%),
+    radial-gradient(2.5px 2.5px at 18% 30%, rgba(255, 255, 255, 0.94), transparent 64%),
+    radial-gradient(2.1px 2.1px at 29% 12%, rgba(255, 255, 255, 0.86), transparent 64%),
+    radial-gradient(2.4px 2.4px at 43% 91%, rgba(255, 255, 255, 0.95), transparent 64%),
+    radial-gradient(2.2px 2.2px at 57% 54%, rgba(255, 255, 255, 0.9), transparent 64%),
+    radial-gradient(2.5px 2.5px at 72% 7%, rgba(255, 255, 255, 0.93), transparent 64%),
+    radial-gradient(2.1px 2.1px at 85% 57%, rgba(255, 255, 255, 0.87), transparent 64%),
+    radial-gradient(2.4px 2.4px at 98% 24%, rgba(255, 255, 255, 0.92), transparent 64%);
+  opacity: 0.85;
+  animation: twinkleFast 3.8s ease-in-out infinite;
+  filter: blur(0.15px);
+}
+
+@keyframes twinkleSlow {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes twinkleFast {
+  0%,
+  100% {
+    opacity: 0.52;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-nav-link {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.85rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.top-nav-link:hover {
+  border-color: rgba(34, 211, 238, 0.35);
+  color: #e0f2fe;
+  background: rgba(34, 211, 238, 0.12);
+}
+
+.custom-cursor-ring,
+.custom-cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    transform 0.12s ease-out,
+    opacity 0.15s ease-out;
+}
+
+.custom-cursor-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid rgba(34, 211, 238, 0.7);
+  background: rgba(34, 211, 238, 0.06);
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #22d3ee;
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.8);
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none;
+  }
+}
