@@ -37,7 +37,7 @@ export interface SimplePortfolioData {
 }
 
 export const simplePortfolioData: SimplePortfolioData = {
-  name: "Michael Adel Saleb",
+  name: "Michael Adel",
   role: "Software Engineer | Flutter Developer | YouTuber",
   heroLead: "Hi, my name is",
   heroHighlight: "and I am a Passionate Flutter Developer",
