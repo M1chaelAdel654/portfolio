@@ -339,7 +339,9 @@ export default function HomePage() {
               </span>
             </div>
             <a
-              href={`mailto:${data.email}`}
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
               className="mt-6 inline-flex items-center rounded-md bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
               Send Message
