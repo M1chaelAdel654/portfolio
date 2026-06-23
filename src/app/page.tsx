@@ -11,19 +11,6 @@ export default function HomePage() {
   const whatsappNumber = data.phone.replace(/[^\d]/g, "");
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
-  const listVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.12 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
-  };
-
   return (
     <main className="mx-auto max-w-6xl px-4 pb-20 pt-8 md:px-8 md:pt-12">
       <CustomCursor />
@@ -190,14 +177,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <motion.section
-        id="projects"
-        className="scroll-mt-24 space-y-5"
-        variants={listVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.15 }}
-      >
+      <section id="projects" className="scroll-mt-24 space-y-5">
         <div className="mb-2">
           <h2 className="text-2xl font-semibold uppercase tracking-wide text-white md:text-3xl">
             My Projects
@@ -208,18 +188,13 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {data.projects.map((project, index) => (
-            <motion.div
-              key={project.name}
-              variants={itemVariants}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              whileHover={{ y: -4 }}
-            >
+          {data.projects.map((project) => (
+            <motion.div key={project.name} whileHover={{ y: -4 }}>
               <SimpleProjectCard project={project} />
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       <section id="contact" className="mt-16 scroll-mt-24">
         <div className="mb-5">

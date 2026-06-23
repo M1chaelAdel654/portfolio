@@ -36,9 +36,8 @@ export function SimpleProjectCard({ project }: SimpleProjectCardProps) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 24, scale: 0.97 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.25 }}
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -8, scale: 1.01 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       onClick={openPrimaryLink}
